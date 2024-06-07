@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
 
-  <link rel="stylesheet" href="./assets/style.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
   <title>Task Board</title>
 </head>
 
@@ -25,55 +25,42 @@
       <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#formModal">Add Task</button>
     </div>
     <!-- Todo: Create a modal with a form to add tasks -->
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md col-xl-4">
-    </div>
-    <div class="modal" tabindex="-1" id="formModal">
+    <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Ask Task</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Add New Task</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <form id="project-form">
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">
-                <input
-                  id="project-name-input"
-                  type="text"
-                  class="form-control"
-                  placeholder="Task Title"
-                  aria-label="Task Title"
-                />
-                <input
-                  placeholder="Task Due Date"
-                  autocomplete="off"
-                  type="date"
-                  class="form-control mb-3"
-                  id="project-dueDate-input"
-                />
-                <input
-                  id="project-description-input"
-                  type="text"
-                  class="form-control"
-                  placeholder="Task Description"
-                  aria-label="Task Description"
-                />
-          <div class="modal-footer">
-            <button type="submit" class="btn btn-primary">Add Task</button>
+          <div class="modal-body">
+            <form id="taskForm">
+              <div class="mb-3">
+                <label for="taskTitle" class="form-label">Task Title</label>
+                <input type="text" class="form-control" id="taskTitle" placeholder="Enter task title">
+              </div>
+              <div class="mb-3">
+                <label for="taskDescription" class="form-label">Task Description</label>
+                <textarea class="form-control" id="taskDescription" rows="3" placeholder="Enter task description"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="taskDueDate" class="form-label">Due Date</label>
+                <input type="date" class="form-control" id="taskDueDate">
+              </div>
+            </form>
           </div>
-          <div id="draggable" class="ui-widget-content"></div>
-          <div id="droppable" class="ui-widget-header"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" id="addTaskBtn">Add Task</button>
+          </div>
         </div>
       </div>
     </div>
-
+    
     <div class="row swim-lanes text-center justify-content-between">
       <div class="col-12 col-lg-4 d-flex">
         <div id="to-do" class="card border-light mb-3 lane flex-grow-1">
           <div class="card-header bg-white">
-            <h2 class="card-title mb-1">Not Yet Started</h2>
+            <h2 class="card-title mb-1">To Do</h2>
           </div>
           <div class="card-body bg-light">
             <div id="todo-cards"></div>
@@ -93,7 +80,7 @@
         <div class="col-12 col-lg-4 d-flex">
           <div id="done" class="card border-light mb-3 lane flex-grow-1">
             <div class="card-header bg-white">
-              <h2 class="card-title mb-1">Completed</h2>
+              <h2 class="card-title mb-1">Done</h2>
             </div>
             <div class="card-body bg-light">
               <div id="done-cards"></div>
@@ -110,12 +97,6 @@
   <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
     integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
-
-  <script src="./assets/script.js"></script>
-</body>
-
-</html>
-
 
   <script src="./assets/js/script.js"></script>
 </body>
