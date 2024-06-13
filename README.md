@@ -31,7 +31,14 @@ Day.js
 
 How to Use
 Click the "Add Task" button to open the modal.
-Fill out the task title, description, and due date in the form.
+Fill out the task title, due date, and task description in the form.
 Click the "Add Task" button in the modal to add the task to the board.
 Drag tasks between columns to change their progress status.
 Click the "Delete" button on a task card to remove it from the board.
+When task font is (Red) tasks are overdue, when task font is (Yellow) tasks are almost due.
+
+Site Link
+https://wcburnette.github.io/Task-Board/
+
+Screen Record
+https://1drv.ms/v/s!Ajvx8AL_kpmUl3Fc6nrX_BddxV6i?e=WXII5A
