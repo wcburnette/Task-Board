@@ -15,10 +15,12 @@ body {
   cursor: grab;
 }
 
-.text-danger {
-  color: red;
+.task-card.text-danger {
+  color: white;
+  background-color: red;
 }
 
-.text-warning {
-  color: yellow;
+.task-card.text-warning {
+  color: white;
+  background-color: yellow;
 }
