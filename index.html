@@ -34,23 +34,24 @@
           </div>
           <div class="modal-body">
             <form id="taskForm">
-              <div class="mb-3">
-                <label for="taskTitle" class="form-label">Task Title</label>
-                <input type="text" class="form-control" id="taskTitle" placeholder="Enter task title">
+              <div class="row mb-3">
+                <div class="col">
+                  <label for="taskTitle" class="form-label">Task Title</label>
+                  <input type="text" class="form-control" id="taskTitle" placeholder="Enter task title">
+                </div>
+                <div class="col">
+                  <label for="taskDueDate" class="form-label">Due Date</label>
+                  <input type="date" class="form-control" id="taskDueDate">
+                </div>
               </div>
               <div class="mb-3">
                 <label for="taskDescription" class="form-label">Task Description</label>
                 <textarea class="form-control" id="taskDescription" rows="3" placeholder="Enter task description"></textarea>
               </div>
-              <div class="mb-3">
-                <label for="taskDueDate" class="form-label">Due Date</label>
-                <input type="date" class="form-control" id="taskDueDate">
-              </div>
             </form>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary" id="addTaskBtn">Add Task</button>
+          <div class="modal-footer justify-content-center">
+            <button type="button" class="btn btn-success" id="addTaskBtn">Add Task</button>
           </div>
         </div>
       </div>
@@ -97,6 +98,11 @@
   <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
     integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
 
   <script src="./script.js"></script>
 </body>
